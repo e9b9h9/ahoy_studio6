@@ -1,0 +1,55 @@
+● Great question! Let me break down the difference
+  between PHP arrays and JSON, and what each is used       
+  for:
+
+  PHP Array (What we currently return)
+
+  return [
+      'contents' => $fileContents,
+      'metadata' => $fileMetadata
+  ];
+
+  What it is: A PHP data structure that exists in the      
+  computer's memory
+  Used for: Internal processing within PHP code
+  Human readable: Only when you var_dump() or log it       
+  for debugging
+  Computer processing: Fast and efficient for PHP to       
+  work with
+
+  JSON (JavaScript Object Notation)
+
+  return json_encode([
+      'contents' => $fileContents,
+      'metadata' => $fileMetadata
+  ]);
+
+  What it is: A text string format that looks like:        
+  {"contents":"file content
+  here","metadata":{"file_name":"test.php"}}
+  Used for:
+  - Sending data between systems (APIs)
+  - Storing data in databases as text
+  - Frontend JavaScript consumption
+  - Human-readable data exchange
+
+  In Your Context:
+
+  Current flow:
+  - FileDataGet returns PHP array →
+  InitializeFileService processes it → Stays in PHP        
+
+  If you use JSON:
+  - FileDataGet returns JSON string →
+  InitializeFileService would need json_decode() to use    
+   it
+
+  The Question:
+
+  Since you're staying within PHP (not sending to
+  frontend/API), do you want:
+  1. PHP array (efficient for internal processing)
+  2. JSON string (if you plan to store/transmit this       
+  data later)
+
+  What's your intended use case?
