@@ -12,11 +12,7 @@ const props = defineProps({
         <div class="flex items-center gap-4">
             <h1 class="text-lg font-semibold">{{ props.title }}</h1>
             <div class="text-sm text-muted-foreground">
-                <span>Home</span>
-                <span class="mx-2">/</span>
-                <span>Codemate</span>
-                <span class="mx-2">/</span>
-                <span>Testing</span>
+         
             </div>
         </div>
     </nav>
