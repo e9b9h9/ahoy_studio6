@@ -11,6 +11,16 @@ Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
+Route::get('page', function () {
+	return Inertia::render('Page');
+})->middleware(['auth', 'verified'])->name('page');
+
+Route::get('testing/header-demo', function () {
+    return Inertia::render('testing/HeaderLayoutDemo');
+})->middleware(['auth', 'verified'])->name('testing.header-demo');
+
+
 Route::get('podbud-dashboard', function () {
     return Inertia::render('PodbudDashboard');
 })->middleware(['auth', 'verified'])->name('podbud-dashboard');

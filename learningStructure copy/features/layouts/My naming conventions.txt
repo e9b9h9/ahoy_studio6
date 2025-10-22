@@ -1,0 +1,3 @@
+My naming conventions
+
+I want to use BEM, we call these components blocks, each having a well-defined purpose or semantics. It's also apparent that a block can contain other blocks within it. However, each block is also independent of other blocks and can be reused elsewhere. For example, it's not necessary that the login block must be part of the header block. It could be moved to a sidebar in a redesigned page layout.
